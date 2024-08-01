@@ -1,0 +1,492 @@
+  /* -------------- general --------------- */
+
+  /* You can add global styles to this file, and also import other style files */
+
+/* --------------------- start of reset ----------------------- */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* ---------------------------------- end of reset -------------------------------- */
+
+/* variables */
+
+:root {
+  --clr-primary: #fff;
+  --clr-secondary: #4e5151;
+  --clr-dark: #111;
+  --clr-light-gray: rgb(230, 230, 230);
+  --hero-height: 70vh;
+  --max-width: 1200px;
+
+  box-sizing: border-box;
+}
+
+body {
+  padding: 1rem;
+  background-color: var(--clr-light-gray) !important;
+}
+
+.responsive-container {
+  width: 100%;
+  max-width: var(--max-width);
+}
+
+.gray-banner {
+  padding: 1rem;
+  text-align: center;
+  background: var(--clr-secondary);
+
+  color: var(--clr-primary);
+  font-weight: bold;
+  /* font-size: 2rem; */
+
+  outline: none;
+  border: none;
+}
+
+
+
+
+  /* -------------- general --------------- */
+  
+  
+  
+  /* --------------- header -----------------*/
+
+.navbar-brand > img {
+    width: 15rem;
+  }
+  
+  .navbar {
+    background-color: transparent;
+    position: absolute;
+    /* left: 0; */
+    /* width: 100%;
+    max-width: 1200px; */
+  }
+  
+  a.nav-link {
+    color: #fff;
+  }
+  
+  a.cart {
+    color: gray;
+    font-weight: bold;
+  }
+  
+  .navbar-placeholder {
+    height: 10rem;
+  }
+
+  #companyName{
+    font-size:3rem;
+    font-weight: bold;
+    color:lightgray;
+  }
+
+  /* --------------- header -----------------*/
+
+
+
+/* ---------- hero ------------ */
+
+.hero {
+    width: 100vw;
+    height: var(--hero-height);
+    background-image: url("https://biking.checkfront.com/media/L55-1--1653928017316951.jpg");
+    /* background-position: left -43px top -148px; */
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+    position: absolute;
+    left: 0;
+    top: 0;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    z-index: -1;
+  
+    /* position: relative; */
+  }
+  
+  .hero-placeholder {
+    height: var(--hero-height);
+  }
+  
+  .title {
+    font-size: 5rem;
+    font-weight: bold;
+  
+    color: var(--clr-primary);
+  }
+  
+  .main {
+    display: flex;
+    column-gap: 2rem;
+  }
+  
+  .left-column {
+    width: 55%;
+  }
+  
+  .right-column {
+    width: 35%;
+  }
+
+
+ /* --------- hero ------------ */
+
+
+ /* --------------------- booking form ----------------------- */
+
+ .header {
+    width: 100%;
+    margin: auto;
+    font-size: 2rem;
+  }
+  
+  .quantity {
+    border: 1px solid lightgray;
+    padding: 0.5rem;
+  }
+  
+  .quantity:focus {
+    outline: none;
+    border: 1px solid lightgray;
+  }
+  
+  .quantity-btn {
+    border: 1px solid lightgray;
+    padding: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .timeframes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 1rem;
+    column-gap: 1rem;
+    width: 100%;
+    margin-top: 2rem;
+  }
+  
+  .timeframe {
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    border: 1px solid lightgray;
+    /* cursor: pointer; */
+    /* width: 47%; */
+  }
+  
+  .timeframe.selected:not([disabled]) {
+    background-color: var(--clr-secondary);
+    border: 1px solid var(--clr-secondary);
+    color: var(--clr-primary);
+  }
+  
+  .err-alert {
+    /* padding-top: 4rem; */
+  
+    color: red;
+  }
+  
+  .add-btn {
+    padding: 0.6rem 1rem 0.6rem 1rem;
+    background-color: var(--clr-secondary);
+    color: var(--clr-primary);
+    font-weight: bold;
+    text-align: center;
+  
+    outline: none;
+    border: none;
+  }
+  
+  .alert-warning {
+    margin-top: 2rem;
+  }
+  
+  .alert-warning .alert-btns {
+    color: #000;
+    margin-top: 1rem;
+  }
+  
+  .alert-btns a {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  
+  /* 
+  .timeframe.disabled{
+  
+  } */
+
+
+
+  .receipt{
+    display: none;
+  }
+
+
+
+
+
+ /* -------------------- booking form ----------------------- */
+
+
+ /* ----------------- bike ---------------- */
+ h1 {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  h1 a {
+    color: var(--clr-dark);
+  }
+  
+  img {
+    width: 40rem;
+    margin-left: 3rem;
+  }
+  
+  .container {
+    margin-bottom: 2rem;
+  }
+  
+
+
+
+
+ /* ---------------- bike ------------------- */
+
+
+
+
+
+ /* Confirmation*/
+
+ .confirmation-container h1 {
+  text-align: center;
+  font-weight: bold;
+
+  margin-bottom: 8rem;
+}
+
+.confirmation-container .message {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.confirmation-container{
+  display: flex;
+  justify-content: space-between;
+  column-gap: 2rem;
+}
+
+.confirmation-container .form-container {
+  width: 40%;
+}
+
+.confirmation-container .bookings-container {
+  width: 50%;
+}
+
+.confirmation-container .rw {
+  width: 75%;
+  margin-left: auto;
+}
+
+
+  /* Confirmation*/
+
+
+
+  /* booking */
+
+  .booking h1 {
+    display: flex;
+    justify-content: space-between;
+  
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+  
+ .booking .quantity {
+    margin-top: 1.5rem;
+  }
+  
+ .booking .remove-btn {
+    text-decoration: underline;
+    color: #000;
+    cursor: pointer;
+  }
+  
+
+
+
+  /* booking */
+
+
+  /* checkout form */
+
+  .checkout-btn {
+    display: flex;
+    justify-content: end;
+  }
+
+
+
+  /* checkout form */
+
+
+  /* success */
+
+  .feedback-message{
+      font-size:3rem;
+      font-weight:bold;
+
+  }
+
+  .successContainer {
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* success */
+
+
+
+
+
+
+
+
+
+
+  
